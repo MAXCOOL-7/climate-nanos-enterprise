@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Climate Nanos Enterprise | Smart Solar Agri-Hub</title>
-<meta name="description" content="Climate Nanos Enterprise engineers nano-enabled, solar-powered solutions for climate-smart agriculture in Sub-Saharan Africa. Mother company of Smart Solar Agri-Hub.">
-<meta property="og:title" content="Climate Nanos Enterprise — Smart Solar Agri-Hub">
-<meta property="og:description" content="Engineering nano and solar solutions for climate-smart agriculture. Eliminating post-harvest loss across Africa.">
+<title>Climate Nanos Enterprise | Smart Solar Agri-Hubs & Adaption AI</title>
+<meta name="description" content="Climate Nanos Enterprise engineers nano-enabled, solar-powered agricultural infrastructure and Adaption AI carbon auditing ecosystems for Sub-Saharan Africa and beyond.">
+<meta property="og:title" content="Climate Nanos Enterprise — Smart Solar Agri-Hubs">
+<meta property="og:description" content="From Farm Resilience to Digital Commerce: Eradicating Post-Harvest Loss Across Africa.">
 <meta property="og:image" content="/.netlify/images?url=/img/logo.png&w=1200&fm=jpg">
 <link rel="icon" type="image/png" href="/.netlify/images?url=/img/logo.png&w=64&h=64&fit=cover&fm=png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <!-- Three.js Library for 3D Globe -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
 <style>
 :root {
@@ -26,7 +26,7 @@
   --text-main: #f3f4f6;
   --text-muted: #9ca3af;
   --border-color: rgba(255, 255, 255, 0.08);
-  --glass-bg: rgba(14, 25, 38, 0.75);
+  --glass-bg: rgba(14, 25, 38, 0.8);
   --font-heading: 'Sora', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 }
@@ -39,15 +39,15 @@ body { line-height: 1.6; overflow-x: hidden; }
 .site-header {
   position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
   display: flex; justify-content: space-between; align-items: center;
-  padding: 1rem 5%; background: rgba(7, 14, 23, 0.85);
-  backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color);
+  padding: 1rem 5%; background: rgba(7, 14, 23, 0.88);
+  backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-color);
 }
 .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: #fff; }
 .logo img { border-radius: 50%; }
-.logo span strong { font-family: var(--font-heading); display: block; font-size: 1.1rem; line-height: 1.2; }
-.logo span small { color: var(--accent-light-green); font-size: 0.8rem; font-weight: 500; }
+.logo span strong { font-family: var(--font-heading); display: block; font-size: 1.05rem; line-height: 1.2; }
+.logo span small { color: var(--accent-light-green); font-size: 0.75rem; font-weight: 500; }
 nav { display: flex; gap: 1.5rem; align-items: center; }
-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+nav a { color: var(--text-muted); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color 0.3s; }
 nav a:hover { color: #fff; }
 
 /* Buttons */
@@ -67,13 +67,13 @@ nav a:hover { color: #fff; }
 /* Hero Section & 3D Canvas */
 .hero {
   position: relative; min-height: 100vh; padding: 8rem 5% 4rem;
-  display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; overflow: hidden;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 4rem; overflow: hidden;
 }
-#hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.6; }
+#hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.5; }
 .hero-text { position: relative; z-index: 2; }
-.pill { display: inline-block; padding: 0.4rem 1rem; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-green); color: var(--accent-light-green); border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1.5rem; }
-.hero-text h1 { font-family: var(--font-heading); font-size: 3rem; line-height: 1.25; margin-bottom: 1.2rem; background: linear-gradient(135deg, #fff 0%, #9ca3af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.lead { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; }
+.pill { display: inline-block; padding: 0.4rem 1rem; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-green); color: var(--accent-light-green); border-radius: 50px; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
+.hero-text h1 { font-family: var(--font-heading); font-size: 2.8rem; line-height: 1.22; margin-bottom: 1.2rem; background: linear-gradient(135deg, #fff 0%, #9ca3af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.lead { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 .hero-card {
@@ -85,37 +85,45 @@ nav a:hover { color: #fff; }
 .live-dot::before { content: ''; width: 8px; height: 8px; background: var(--accent-green); border-radius: 50%; box-shadow: 0 0 10px var(--accent-green); }
 
 /* Stats Bar */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 5%; background: var(--bg-card); border-y: 1px solid var(--border-color); text-align: center; }
-.stats strong { display: block; font-family: var(--font-heading); font-size: 2rem; color: var(--accent-light-green); }
-.stats span { font-size: 0.9rem; color: var(--text-muted); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 5%; background: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); text-align: center; }
+.stats strong { display: block; font-family: var(--font-heading); font-size: 1.9rem; color: var(--accent-light-green); }
+.stats span { font-size: 0.88rem; color: var(--text-muted); }
 
 /* Section Common */
 .section { padding: 6rem 5%; position: relative; z-index: 2; }
 .section-tint { background: rgba(14, 25, 38, 0.4); }
 .section-dark { background: #04080e; }
-.section-head { margin-bottom: 4rem; }
+.section-head { margin-bottom: 3.5rem; }
 .section-head.center { text-align: center; }
-.eyebrow { color: var(--accent-green); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px; }
-.section-head h2 { font-family: var(--font-heading); font-size: 2.3rem; margin-top: 0.5rem; }
+.eyebrow { color: var(--accent-green); font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 1.5px; }
+.section-head h2 { font-family: var(--font-heading); font-size: 2.2rem; margin-top: 0.4rem; }
 
 /* Grid Layouts */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: start; }
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; background: var(--bg-card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); }
-.facts dt { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
-.facts dd { font-weight: bold; color: #fff; font-size: 0.95rem; }
+.facts dt { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; }
+.facts dd { font-weight: bold; color: #fff; font-size: 0.92rem; }
+
+/* Tri-Integration Model Cards */
+.tri-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+.tri-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.2rem; transition: transform 0.3s, border-color 0.3s; }
+.tri-card:hover { transform: translateY(-5px); border-color: var(--accent-green); }
+.tri-card .ico { font-size: 2.2rem; margin-bottom: 1rem; display: inline-block; }
+.tri-card h3 { font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.75rem; color: #fff; }
+.tri-card p { font-size: 0.9rem; color: var(--text-muted); }
 
 /* Leadership Grid */
-.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 2rem; }
 .member-card {
   background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px;
   padding: 1.8rem; transition: transform 0.3s, border-color 0.3s; position: relative; display: flex; flex-direction: column; justify-content: space-between;
 }
 .member-card:hover { transform: translateY(-5px); border-color: var(--accent-green); background: var(--bg-card-hover); }
-.member-badge { position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: var(--accent-light-green); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 6px; }
-.member-card h3 { font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.25rem; }
-.member-role { color: var(--accent-green); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.75rem; }
-.member-bio { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; }
-.member-contact { font-size: 0.82rem; border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.member-badge { position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: var(--accent-light-green); font-size: 0.73rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 6px; }
+.member-card h3 { font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.2rem; }
+.member-role { color: var(--accent-green); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem; }
+.member-bio { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; flex-grow: 1; }
+.member-contact { font-size: 0.8rem; border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.35rem; }
 .member-contact a { color: var(--text-muted); text-decoration: none; word-break: break-all; transition: color 0.2s; }
 .member-contact a:hover { color: var(--accent-light-green); }
 
@@ -123,13 +131,30 @@ nav a:hover { color: #fff; }
 .timeline { position: relative; max-width: 900px; margin: 0 auto; list-style: none; border-left: 2px solid var(--border-color); padding-left: 2rem; }
 .timeline-item { position: relative; margin-bottom: 3rem; }
 .timeline-item::before { content: ''; position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-green); box-shadow: 0 0 10px var(--accent-green); }
-.timeline-time { font-family: var(--font-heading); font-size: 0.85rem; color: var(--accent-light-green); font-weight: 700; }
-.timeline-tag { display: inline-block; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.5rem; color: var(--text-muted); }
-.timeline-item h3 { font-family: var(--font-heading); font-size: 1.25rem; margin: 0.4rem 0; }
-.timeline-item p { color: var(--text-muted); font-size: 0.95rem; }
+.timeline-time { font-family: var(--font-heading); font-size: 0.82rem; color: var(--accent-light-green); font-weight: 700; }
+.timeline-tag { display: inline-block; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); font-size: 0.72rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.5rem; color: var(--text-muted); }
+.timeline-item h3 { font-family: var(--font-heading); font-size: 1.2rem; margin: 0.35rem 0; }
+.timeline-item p { color: var(--text-muted); font-size: 0.92rem; }
 .timeline-highlights { margin-top: 0.75rem; background: var(--bg-card); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); display: flex; gap: 1.5rem; flex-wrap: wrap; }
-.timeline-highlights div span { display: block; font-size: 0.8rem; color: var(--text-muted); }
+.timeline-highlights div span { display: block; font-size: 0.78rem; color: var(--text-muted); }
 .timeline-highlights div b { color: var(--accent-green); font-family: var(--font-heading); }
+
+/* Contact & QR Code Card Section */
+.contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+.contact-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.contact-list li { display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); font-size: 0.95rem; }
+.contact-list a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
+.contact-list a:hover { color: var(--accent-light-green); }
+
+.qr-card {
+  background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px;
+  padding: 2.5rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4); position: relative; overflow: hidden;
+}
+.qr-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent-green), var(--accent-yellow)); }
+.qr-wrapper { background: #fff; padding: 1rem; border-radius: 12px; display: inline-block; margin: 1.5rem 0 1rem; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+.qr-wrapper img { width: 180px; height: 180px; display: block; }
+.qr-card h3 { font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.2rem; }
+.qr-card p { font-size: 0.85rem; color: var(--text-muted); }
 
 /* Adaptive AI Concierge Floating Widget */
 .ai-widget {
@@ -149,26 +174,16 @@ nav a:hover { color: #fff; }
   display: none; flex-direction: column; overflow: hidden; margin-bottom: 1rem; backdrop-filter: blur(20px);
 }
 .ai-window.active { display: flex; }
-.ai-header { background: rgba(7, 14, 23, 0.9); padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
-.ai-header h4 { font-family: var(--font-heading); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+.ai-header { background: rgba(7, 14, 23, 0.95); padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+.ai-header h4 { font-family: var(--font-heading); font-size: 0.92rem; display: flex; align-items: center; gap: 0.5rem; }
 .ai-close { background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer; }
-.ai-messages { flex-grow: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: flex-start; flex-direction: column; gap: 0.8rem; font-size: 0.88rem; }
+.ai-messages { flex-grow: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.88rem; }
 .ai-msg { padding: 0.75rem 1rem; border-radius: 12px; max-width: 85%; line-height: 1.4; }
 .ai-msg.system { background: rgba(255,255,255,0.05); color: var(--text-main); align-self: flex-start; border-bottom-left-radius: 2px; border: 1px solid var(--border-color); }
 .ai-msg.user { background: var(--accent-green); color: #fff; align-self: flex-end; border-bottom-right-radius: 2px; }
-.ai-input-area { padding: 0.8rem; border-top: 1px solid var(--border-color); display: flex; gap: 0.5rem; background: rgba(7, 14, 23, 0.9); }
+.ai-input-area { padding: 0.8rem; border-top: 1px solid var(--border-color); display: flex; gap: 0.5rem; background: rgba(7, 14, 23, 0.95); }
 .ai-input-area input { flex-grow: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); padding: 0.6rem 1rem; border-radius: 8px; color: #fff; outline: none; font-size: 0.85rem; }
 .ai-input-area button { background: var(--accent-green); border: none; color: #fff; padding: 0.6rem 1rem; border-radius: 8px; cursor: pointer; font-weight: bold; }
-
-/* Contact Section */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-.contact-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
-.contact-list li { display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); }
-.contact-list a { color: var(--text-main); text-decoration: none; }
-.contact-form { display: flex; flex-direction: column; gap: 1.2rem; background: var(--bg-card); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); }
-.contact-form label { display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted); }
-.contact-form input, .contact-form select, .contact-form textarea { background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); padding: 0.75rem 1rem; border-radius: 8px; color: #fff; font-family: var(--font-body); }
-.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent-green); outline: none; }
 
 /* Footer */
 .site-footer { padding: 3rem 5%; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: #04080e; font-size: 0.85rem; color: var(--text-muted); }
@@ -187,13 +202,13 @@ nav a:hover { color: #fff; }
 <header class="site-header" id="top">
   <a class="logo" href="#top" aria-label="Climate Nanos Enterprise home">
     <img src="/.netlify/images?url=/img/logo.png&w=96&h=96&fit=cover&fm=webp" alt="Logo" width="40" height="40" style="background: var(--accent-green);">
-    <span><strong>Climate Nanos Enterprise</strong><small>Smart Solar Agri-Hub</small></span>
+    <span><strong>Climate Nanos Enterprise</strong><small>Smart Solar Agri-Hubs &amp; AI</small></span>
   </a>
   <nav id="site-nav">
     <a href="#about">About</a>
-    <a href="#ecosystem">Ecosystem</a>
+    <a href="#ecosystem">Tri-Integration</a>
     <a href="#leadership">Leadership</a>
-    <a href="#achievements">Achievements</a>
+    <a href="#achievements">Milestones</a>
     <a href="#contact">Contact</a>
     <a class="btn btn-sm btn-yellow" href="https://smart-solar-agri-hub.myshopify.com/" target="_blank" rel="noopener">Enter Store</a>
   </nav>
@@ -205,12 +220,12 @@ nav a:hover { color: #fff; }
   <canvas id="hero-canvas"></canvas>
   
   <div class="hero-text">
-    <span class="pill">⚡ AGRITECH • NANOTECH • OFF-GRID SOLAR</span>
-    <h1>Engineering Nano Solutions for Climate-Smart Agriculture</h1>
-    <p class="lead">We pioneer nano-enabled, solar-powered agricultural systems designed to eliminate post-harvest losses, elevate crop longevity, and empower smallholder farmers across Africa. <strong>Smart Solar Agri-Hub</strong> is where precision lab tech meets the farm gate.</p>
+    <span class="pill">🌱 CAC: BN 9703072 • ADAPTION AI • CLEAN TECH</span>
+    <h1>From Farm Resilience to Digital Commerce Across Africa</h1>
+    <p class="lead">We engineer decentralized, solar-powered agricultural hubs and **Adaption AI Green Stability Matrices** that eliminate post-harvest losses, automate carbon auditing, and empower rural cooperatives[cite: 2, 4, 15].</p>
     <div class="hero-actions">
       <a class="btn btn-yellow" href="https://smart-solar-agri-hub.myshopify.com/" target="_blank" rel="noopener">Visit Agri-Hub Store →</a>
-      <a class="btn btn-outline" href="#about">Our Technology</a>
+      <a class="btn btn-outline" href="#ecosystem">Explore Tri-Integration</a>
     </div>
   </div>
 
@@ -218,95 +233,98 @@ nav a:hover { color: #fff; }
     <span class="float-badge">7× Shelf-Life Boost</span>
     <span class="live-dot">Commercial Pre-Launch Active</span>
     <h3 style="font-family: var(--font-heading); margin-top: 0.5rem;">Smart Solar Agri-Hub</h3>
-    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Off-grid microgrid storage, ESP32 microclimate telemetry & automated precision drip irrigation unit.</p>
+    <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.2rem;">Off-grid cold storage (R-290 refrigerants), ESP32 telemetry, automated drip irrigation, and Adaption AI carbon badges[cite: 3, 4, 8].</p>
     <a class="btn btn-green" style="width: 100%;" href="https://smart-solar-agri-hub.myshopify.com/" target="_blank" rel="noopener">Access Storefront</a>
-    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.8rem; text-align: center;">
       Store Password: <code style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.4rem; border-radius: 4px; color: #fff;">Climate-Nanos</code>
     </p>
   </div>
 </section>
 
 <!-- IMPACT STATS -->
-<section class="stats">
+<stats class="stats" aria-label="Impact Metrics">
   <div>
     <strong>2 → 14+ Days</strong>
-    <span>Tomato Shelf-Life Extension</span>
+    <span>Tomato Shelf-Life Extension[cite: 3]</span>
   </div>
   <div>
     <strong>3 → 21+ Days</strong>
-    <span>Pepper Freshness Preservation</span>
+    <span>Fresh Pepper Preservation[cite: 3]</span>
   </div>
   <div>
     <strong>₦4.35M NGN</strong>
-    <span>Non-Dilutive Capital & Grants</span>
+    <span>Non-Dilutive Grants & Capital Raised[cite: 6]</span>
   </div>
   <div>
     <strong>100% Off-Grid</strong>
-    <span>LiFePO4 Solar Battery Architecture</span>
+    <span>Zero-Carbon Solar Architecture[cite: 3, 7]</span>
   </div>
-</section>
+</stats>
 
 <!-- ABOUT SECTION -->
 <section class="section" id="about">
   <div class="section-head">
     <span class="eyebrow">Enterprise Overview</span>
-    <h2>Turning Clean Energy into Global Food Security</h2>
+    <h2>Empowering Youth and Energizing Agribusiness</h2>
   </div>
   <div class="about-grid">
     <div>
-      <p>Founded on <strong>December 2, 2024</strong>, Climate Nanos Enterprise addresses Africa’s critical post-harvest challenge: over 40% of fresh produce spoils before reaching market due to severe cold-chain infrastructure deficits.</p>
-      <p style="margin-top: 1rem;">Our solution deploys <strong>off-grid clean energy microgrids</strong> integrated with low-pressure IoT telemetry and nanotechnology. Our flagship platform, the <strong>Smart Solar Agri-Hub</strong>, delivers on-farm preservation, real-time sensor analytics, and precision yield protection directly to rural agricultural clusters.</p>
+      <p>Founded on **December 2, 2024** and officially incorporated under CAC (BN 9703072), Climate Nanos Enterprise tackles Sub-Saharan Africa’s critical post-harvest crisis where 30% to 50% of fresh produce rots within 48 hours due to unreliable cold chains and grid instability[cite: 2, 3, 5, 6].</p>
+      <p style="margin-top: 1rem;">Operating from Ogun State, Nigeria, our mission is to deploy scalable decentralized infrastructure that bridges smallholder farmers directly with urban digital markets while certifying sustainability through automated carbon telemetry[cite: 2, 4].</p>
       
       <dl class="facts">
-        <div><dt>Founded</dt><dd>Dec 02, 2024</dd></div>
-        <div><dt>Incorporation</dt><dd>CAC BN 9703072</dd></div>
-        <div><dt>Headquarters</dt><dd>Abeokuta, Ogun State</dd></div>
-        <div><dt>Tax ID (TIN)</dt><dd>262279876100</dd></div>
+        <div><dt>Founded</dt><dd>Dec 02, 2024[cite: 2]</dd></div>
+        <div><dt>Registration</dt><dd>CAC BN 9703072[cite: 2]</dd></div>
+        <div><dt>Headquarters</dt><dd>Ogun State, Nigeria[cite: 2]</dd></div>
+        <div><dt>Founder &amp; CEO</dt><dd>Stephen Opanuga[cite: 2]</dd></div>
       </dl>
     </div>
     
     <div style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color);">
-      <h3 style="font-family: var(--font-heading); margin-bottom: 1rem; color: var(--accent-light-green);">Core Mission &amp; Scale Horizon</h3>
-      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Moving from rigorous field-validated prototypes to commercial deployment across West and Sub-Saharan Africa. Empowering rural farmers while advancing international climate-smart goals.</p>
-      <div style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
-        <span style="font-size: 0.8rem; color: var(--accent-green); font-weight: bold; text-transform: uppercase;">Institutional Academic Partner</span>
-        <p style="font-size: 0.9rem; margin-top: 0.2rem;">Endorsed by the Department of Mechanical Engineering, Federal University of Agriculture, Abeokuta (FUNAAB).</p>
-      </div>
+      <h3 style="font-family: var(--font-heading); margin-bottom: 1rem; color: var(--accent-light-green);">The Core Problem We Solve</h3>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: var(--text-muted);">
+        <li>❌ <b>Post-Harvest Spoilage:</b> 30%–50% crop loss without cold rooms[cite: 3].</li>
+        <li>❌ <b>Grid Instability:</b> Costly diesel reliance and power outages[cite: 3].</li>
+        <li>❌ <b>Economic Isolation:</b> Forced distress sales to middlemen[cite: 3].</li>
+        <li>❌ <b>Youth Unemployment:</b> Lack of rural agri-tech enterprise opportunities[cite: 2, 3].</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ECOSYSTEM -->
+<!-- TRI-INTEGRATION MODEL ECOSYSTEM -->
 <section class="section section-tint" id="ecosystem">
   <div class="section-head center">
-    <span class="eyebrow">Integrated Architecture</span>
-    <h2>Lab → Microgrid → Agricultural Impact</h2>
+    <span class="eyebrow">Scalable Architecture</span>
+    <h2>The Tri-Integration Model</h2>
+    <p style="color: var(--text-muted); margin-top: 0.4rem;">Combining physical hardware, digital e-commerce, and Adaption AI carbon auditing.</p>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-    <div style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color);">
-      <div style="font-size: 2rem; margin-bottom: 1rem;">🔬</div>
-      <h3 style="font-family: var(--font-heading);">Climate Nanos Enterprise</h3>
-      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">R&amp;D wing focused on nanotech formulations, solid-state thermoelectric cooling physics, microelectronics integration, and energy storage systems.</p>
+  
+  <div class="tri-grid">
+    <div class="tri-card">
+      <span class="ico">⚡</span>
+      <h3>1. Hardware Innovation</h3>
+      <p>Zero-carbon cold rooms (R-290/R-600a refrigerants), automated solenoid drip irrigation, and PIR motion-defense perimeters extending shelf life from 2 to 14+ days[cite: 3, 7, 8].</p>
     </div>
-    <div style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--accent-green);">
-      <div style="font-size: 2rem; margin-bottom: 1rem;">☀️</div>
-      <h3 style="font-family: var(--font-heading);">Smart Solar Agri-Hub</h3>
-      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Hardware &amp; IoT platform delivering off-grid cold preservation, soil microclimate monitoring, and automated irrigation directly to farm cooperatives.</p>
+    <div class="tri-card" style="border-color: var(--accent-green);">
+      <span class="ico">🛒</span>
+      <h3>2. Digital E-Commerce</h3>
+      <p>Direct farm-to-consumer digital marketplace connecting rural cold hubs to urban off-takers and international processors via seamless transaction APIs[cite: 3, 4, 9].</p>
     </div>
-    <div style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color);">
-      <div style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
-      <h3 style="font-family: var(--font-heading);">Farmer &amp; Market Value</h3>
-      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Eliminates distress selling by extending crop shelf life, increasing rural farmer revenue margins, and minimizing post-harvest food waste emissions.</p>
+    <div class="tri-card">
+      <span class="ico">🛡️</span>
+      <h3>3. Adaption AI (Green Stability Matrix)</h3>
+      <p>Automated CO₂ lifecycle auditing via n9n pipelines that evaluate supply chain telemetry, calculate emissions in kg CO₂e, and inject certified green badges onto product listings[cite: 3, 9, 15].</p>
     </div>
   </div>
 </section>
 
-<!-- FOUNDERS & LEADERSHIP -->
+<!-- LEADERSHIP & FOUNDERS -->
 <section class="section" id="leadership">
   <div class="section-head center">
-    <span class="eyebrow">Executive Leadership</span>
-    <h2>The Founders &amp; Executive Board</h2>
-    <p style="color: var(--text-muted); margin-top: 0.5rem;">Multidisciplinary team of engineers, software architects, IoT developers, and institutional advisors.</p>
+    <span class="eyebrow">Multidisciplinary Leadership</span>
+    <h2>The Executive Team</h2>
+    <p style="color: var(--text-muted); margin-top: 0.4rem;">Engineers, software architects, and agricultural innovators driving operational excellence[cite: 14].</p>
   </div>
   
   <div class="team-grid">
@@ -315,8 +333,8 @@ nav a:hover { color: #fff; }
       <span class="member-badge">Full-time</span>
       <div>
         <h3>Opanuga Stephen</h3>
-        <div class="member-role">Strategic Lead &amp; E-commerce Expert</div>
-        <p class="member-bio">Provides overall leadership, vision, and coordination of operations. Oversees corporate business strategy, e-commerce growth architecture, and aligns technical execution with long-term international expansion goals.</p>
+        <div class="member-role">Strategic Lead &amp; E-commerce Expert[cite: 14]</div>
+        <p class="member-bio">Provides overall leadership, business strategy, e-commerce expertise, and coordinates long-term operational vision.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:stevenopanuga@gmail.com">✉️ stevenopanuga@gmail.com</a>
@@ -329,8 +347,8 @@ nav a:hover { color: #fff; }
       <span class="member-badge">Full-time</span>
       <div>
         <h3>Ajibade Ayomiposi</h3>
-        <div class="member-role">Operations &amp; IoT Hardware Lead</div>
-        <p class="member-bio">Manages daily field operations, leads hardware prototyping, sensor integration, microclimate controller testing, and supply chain logistics to ensure optimal performance across deployment hubs.</p>
+        <div class="member-role">Operations &amp; IoT Lead[cite: 14]</div>
+        <p class="member-bio">Manages daily operations, leads IoT hardware prototyping, sensor integration, and field logistics.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:ayomiposiajibade2005@gmail.com">✉️ ayomiposiajibade2005@gmail.com</a>
@@ -343,8 +361,8 @@ nav a:hover { color: #fff; }
       <span class="member-badge">Full-time</span>
       <div>
         <h3>Sanusi Isaiah Opeyemi</h3>
-        <div class="member-role">Engineering &amp; Solar Infrastructure</div>
-        <p class="member-bio">Heads engineering CAD design, solar microgrid infrastructure deployment, thermal management systems, and long-term technical scaling strategies for renewable energy hardware.</p>
+        <div class="member-role">Engineering &amp; Solar Infrastructure[cite: 14]</div>
+        <p class="member-bio">Heads engineering design, solar microgrid deployment, and technical scaling for renewable systems.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:sanusiisaiahb1@gmail.com">✉️ sanusiisaiahb1@gmail.com</a>
@@ -357,8 +375,8 @@ nav a:hover { color: #fff; }
       <span class="member-badge">Full-time</span>
       <div>
         <h3>Jimo Mubarak</h3>
-        <div class="member-role">IoT Data &amp; Automation Lead</div>
-        <p class="member-bio">Develops IoT data pipelines, embedded telemetry protocols, automation systems, and robotics integration to optimize hub performance and farmer usability.</p>
+        <div class="member-role">IoT &amp; Automation Lead[cite: 14]</div>
+        <p class="member-bio">Develops IoT data pipelines, automation systems, and robotics integration to optimize hub performance.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:jimomubarak@gmail.com">✉️ jimomubarak@gmail.com</a>
@@ -366,13 +384,13 @@ nav a:hover { color: #fff; }
       </div>
     </div>
 
-    <!-- 5. Taiwo Timilehin Olajolo (Timmy) -->
+    <!-- 5. Taiwo Timilehin Olajolo -->
     <div class="member-card">
       <span class="member-badge">Full-time</span>
       <div>
         <h3>Taiwo Timilehin Olajolo (Timmy)</h3>
-        <div class="member-role">UI/UX &amp; Dashboard Architect</div>
-        <p class="member-bio">Architects the mobile and web frontend dashboards, ensuring optimal user interface design, accessibility, and intuitive telemetry monitoring for farmers and hub operators.</p>
+        <div class="member-role">UI/UX &amp; Dashboard Architect[cite: 14]</div>
+        <p class="member-bio">Architects frontend dashboards and user interfaces ensuring accessibility for farmers and operators.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:timilehinolajolo@gmail.com">✉️ timilehinolajolo@gmail.com</a>
@@ -385,8 +403,8 @@ nav a:hover { color: #fff; }
       <span class="member-badge">Full-time</span>
       <div>
         <h3>Ayomide Akinleye</h3>
-        <div class="member-role">Systems Integration Lead</div>
-        <p class="member-bio">Oversees end-to-end systems integration, ensuring seamless communication between hardware firmware, cloud data layers, and physical microgrid components.</p>
+        <div class="member-role">Systems Integration Lead[cite: 14]</div>
+        <p class="member-bio">Oversees end-to-end systems integration, ensuring hardware and software layers work seamlessly together.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:c.tummy01@gmail.com">✉️ c.tummy01@gmail.com</a>
@@ -396,11 +414,11 @@ nav a:hover { color: #fff; }
 
     <!-- 7. Prof. S.O. Ismaila -->
     <div class="member-card">
-      <span class="member-badge">Full-time Advisor</span>
+      <span class="member-badge">Full-time</span>
       <div>
         <h3>Prof. S.O. Ismaila</h3>
-        <div class="member-role">Institutional Advisor</div>
-        <p class="member-bio">Provides institutional academic credibility, validates mechanical engineering standards, guides strategic outreach, and strengthens corporate positioning.</p>
+        <div class="member-role">Institutional Advisor[cite: 14]</div>
+        <p class="member-bio">Provides institutional credibility, validates engineering standards, and guides external academic outreach.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:ismailaso@funaab.edu.ng">✉️ ismailaso@funaab.edu.ng</a>
@@ -413,8 +431,8 @@ nav a:hover { color: #fff; }
       <span class="member-badge">Full-time</span>
       <div>
         <h3>Alpha Ind Thomas</h3>
-        <div class="member-role">Partnerships &amp; Global Expansion</div>
-        <p class="member-bio">Leads international stakeholder relations, funding acquisition, strategic alliance building, and global market expansion across emerging markets.</p>
+        <div class="member-role">Partnerships &amp; Global Expansion[cite: 14]</div>
+        <p class="member-bio">Leads international relations, funding acquisition, and global market expansion through strategic alliances.</p>
       </div>
       <div class="member-contact">
         <a href="mailto:alphathomas277@gmail.com">✉️ alphathomas277@gmail.com</a>
@@ -424,121 +442,95 @@ nav a:hover { color: #fff; }
   </div>
 </section>
 
-<!-- ACHIEVEMENTS & TIMELINE -->
+<!-- TIMELINE OF ACHIEVEMENTS -->
 <section class="section section-dark" id="achievements">
   <div class="section-head center">
-    <span class="eyebrow">Proven Execution</span>
+    <span class="eyebrow">Proven Traction</span>
     <h2>Timeline of Achievements</h2>
-    <p style="color: var(--text-muted);">From foundational R&amp;D to international summits and commercial scaling.</p>
+    <p style="color: var(--text-muted);">Recognized by leading agricultural, technical, and global innovation bodies[cite: 6].</p>
   </div>
 
-  <div class="timeline">
-    <!-- Huawei ICT -->
-    <div class="timeline-item">
+  <ol class="timeline">
+    <li class="timeline-item">
       <div class="timeline-time">2026 – 2027 <span class="timeline-tag">Active</span></div>
-      <h3>Huawei ICT Competition — Innovation Track</h3>
-      <p>Selected as official participants competing in the Innovation Track, leveraging advanced AI and IoT cloud capabilities for agricultural transformation.</p>
-    </div>
-
-    <!-- Swarm Alignment -->
-    <div class="timeline-item">
+      <h3>Huawei ICT Competition</h3>
+      <p>Official participant competing in the Innovation Track with advanced IoT &amp; cloud systems.</p>
+    </li>
+    <li class="timeline-item">
       <div class="timeline-time">Nov 2026 <span class="timeline-tag">AI Alignment</span></div>
-      <h3>Swarm Alignment Hackathon Selection</h3>
-      <p>Selected to compete in the virtual Global Sprint organized by Apart Research and the AI Alignment Foundation (AIAF), focusing on AI multi-agent protocols and network system stability.</p>
-    </div>
-
-    <!-- UN FAO ASIF -->
-    <div class="timeline-item">
-      <div class="timeline-time">Oct 2026 <span class="timeline-tag">Global Summit</span></div>
+      <h3>Swarm Alignment Hackathon</h3>
+      <p>Selected to compete in the virtual Global Sprint organized by Apart Research and AIAF focusing on multi-agent protocols.</p>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-time">Oct 2026 <span class="timeline-tag">Global Showcase</span></div>
       <h3>UN FAO ASIF Exhibitor — Addis Ababa, Ethiopia</h3>
-      <p>Invited international participant and official exhibitor of the Smart Solar Agri-Hub at the UN FAO Africa Science &amp; Innovation Forum held at the United Nations Economic Commission for Africa (UNECA) headquarters.</p>
-    </div>
-
-    <!-- EIP Cairo -->
-    <div class="timeline-item">
+      <p>Officially exhibited the Smart Solar Agri-Hub as an international participant at the UN FAO Africa Science &amp; Innovation Forum at UNECA headquarters[cite: 6].</p>
+    </li>
+    <li class="timeline-item">
       <div class="timeline-time">2026 <span class="timeline-tag">Global Pitch</span></div>
       <h3>EIP Selection — Cairo, Egypt</h3>
-      <p>Selected to pitch for a share of the $35,000 USD funding pool at the Entrepreneurs Investment Program (EIP) during the Global Entrepreneurship Festival.</p>
-    </div>
-
-    <!-- CAC -->
-    <div class="timeline-item">
-      <div class="timeline-time">July 22, 2026 <span class="timeline-tag">Legal Entity</span></div>
-      <h3>Corporate Affairs Commission Incorporation</h3>
-      <p>Officially registered with Nigeria’s Corporate Affairs Commission as a commercial enterprise (BN 9703072, TIN 262279876100).</p>
-    </div>
-
-    <!-- NEO Grant -->
-    <div class="timeline-item">
-      <div class="timeline-time">May 2026 <span class="timeline-tag">Winner &amp; Grant</span></div>
+      <p>Selected to pitch for a share of the $35,000 USD funding pool at the Entrepreneurs Investment Program during the Global Entrepreneurship Festival.</p>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-time">July 2026 <span class="timeline-tag">Corporate</span></div>
+      <h3>CAC Corporate Business Registration</h3>
+      <p>Officially incorporated with Nigeria’s Corporate Affairs Commission under BN 9703072 (TIN: 262279876100)[cite: 6].</p>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-time">May 2026 <span class="timeline-tag">Grant Winner</span></div>
       <h3>Winner — Nigerian Engineering Olympiad (NEO)</h3>
-      <p>Awarded top regional honors and a ₦3,000,000 NGN prototype support grant (supported by NSE, NCDMB, FIRST E&amp;P, and Renaissance Africa Energy), bringing total capital raised to ₦4,350,000 NGN.</p>
-    </div>
-
-    <!-- Oyebolu Competition -->
-    <div class="timeline-item">
-      <div class="timeline-time">May 2026 <span class="timeline-tag">Innovation Award</span></div>
+      <p>Awarded a ₦3,000,000 NGN prototype support grant ($3,000 USD / ₦4,350,000 total capital raised) to validate the operational prototype[cite: 6].</p>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-time">May 2026 <span class="timeline-tag">Award</span></div>
       <h3>2nd Place — Philip Bolude Oyebolu Innovation Competition</h3>
-      <p>Earned 2nd Place honors for technical feasibility, hardware execution, and commercial scalability organized by the Nigerian Society of Engineers (NSE).</p>
-    </div>
-
-    <!-- JCI Hackathon -->
-    <div class="timeline-item">
-      <div class="timeline-time">2026 <span class="timeline-tag">Top Finalist</span></div>
+      <p>Earned 2nd Place recognition for overall technical feasibility, entrepreneurial potential, and social impact[cite: 6].</p>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-time">2026 <span class="timeline-tag">Finalist</span></div>
       <h3>JCI Nigeria Global Digital Economy Hackathon</h3>
-      <p>Recognized as a Top 20 Finalist nationwide for high-impact agritech digital infrastructure.</p>
-    </div>
-
-    <!-- Storage Breakthrough -->
-    <div class="timeline-item">
-      <div class="timeline-time">2026 <span class="timeline-tag">Technical Validation</span></div>
-      <h3>Engineering &amp; Storage Validation Breakthrough</h3>
-      <p>Field-tested the 100% off-grid solar Agri-Hub prototype (LiFePO4 energy storage, ESP32 microclimate telemetry, precision drip irrigation):</p>
+      <p>Recognized as a Top 20 Finalist nationwide[cite: 6].</p>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-time">2026 <span class="timeline-tag">Validation</span></div>
+      <h3>Engineering &amp; Storage Breakthrough</h3>
+      <p>Field-tested the 100% off-grid solar Agri-Hub prototype (LiFePO4 storage, ESP32 telemetry, automated irrigation):</p>
       <div class="timeline-highlights">
-        <div><span>Tomato Preservation</span><b>2 → 14+ Days</b></div>
-        <div><span>Pepper Preservation</span><b>3 → 21+ Days</b></div>
+        <div><span>Tomato Shelf Life</span><b>2 → 14+ Days[cite: 3]</b></div>
+        <div><span>Pepper Shelf Life</span><b>3 → 21+ Days[cite: 3]</b></div>
       </div>
-    </div>
-
-    <!-- Academic Endorsement -->
-    <div class="timeline-item">
-      <div class="timeline-time">2026 <span class="timeline-tag">Institutional</span></div>
-      <h3>FUNAAB Academic Endorsement</h3>
-      <p>Received formal engineering validation and institutional backing from the Department of Mechanical Engineering, Federal University of Agriculture, Abeokuta.</p>
-    </div>
-  </div>
+    </li>
+  </ol>
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT & QR CODE SECTION -->
 <section class="section" id="contact">
   <div class="contact-grid">
     <div>
-      <span class="eyebrow">Get In Touch</span>
-      <h2>Partner with Climate Nanos Enterprise</h2>
-      <p style="color: var(--text-muted); margin-top: 0.5rem;">We are currently scaling operations and seeking strategic investors, agricultural cooperatives, and institutional partners.</p>
+      <span class="eyebrow">Contact &amp; Partnerships</span>
+      <h2>Let's Grow Together</h2>
+      <p style="color: var(--text-muted); margin-top: 0.5rem;">Partners, investors, agricultural cooperatives, and media — connect with our executive team[cite: 11, 13].</p>
       
       <ul class="contact-list">
         <li><span>✉️</span> <a href="mailto:climatenanos@gmail.com">climatenanos@gmail.com</a></li>
         <li><span>📞</span> <a href="tel:+2349059241567">+234 905 924 1567</a></li>
-        <li><span>📍</span> Alabata, Abeokuta, Ogun State, Nigeria</li>
+        <li><span>📍</span> Ogun State, Nigeria[cite: 2]</li>
         <li><span>🔗</span> <a href="https://www.linkedin.com/company/climate-nanos-enterprise/" target="_blank" rel="noopener">Climate Nanos Enterprise LinkedIn</a></li>
+        <li><span>🛒</span> <a href="https://smart-solar-agri-hub.myshopify.com/" target="_blank" rel="noopener">smart-solar-agri-hub.myshopify.com</a></li>
       </ul>
     </div>
 
-    <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for contacting Climate Nanos Enterprise. Our executive team will respond shortly.');">
-      <label>Full Name <input type="text" required placeholder="Dr. Jane Doe"></label>
-      <label>Email Address <input type="email" required placeholder="jane@organization.com"></label>
-      <label>Inquiry Type
-        <select>
-          <option>Investor / Capital Partner</option>
-          <option>Farming Cooperative Deployment</option>
-          <option>Institutional / Academic Collaboration</option>
-          <option>Media &amp; Press</option>
-        </select>
-      </label>
-      <label>Message <textarea rows="4" required placeholder="How would you like to collaborate?"></textarea></label>
-      <button class="btn btn-green" type="submit">Send Message</button>
-    </form>
+    <!-- QR CODE CARD -->
+    <div class="qr-card">
+      <span class="eyebrow">Quick Connect</span>
+      <h3>Scan to Access &amp; Verify</h3>
+      <p>Scan this secure QR code with any mobile device to instantly load our digital contact card and pitch resources.</p>
+      <div class="qr-wrapper">
+        <!-- Embedded scannable QR code image provided in user context -->
+        <img src="image_4de6e1.png" alt="Climate Nanos Enterprise QR Code" width="180" height="180">
+      </div>
+      <p style="font-size: 0.78rem; color: var(--accent-light-green); font-weight: bold; margin-top: 0.5rem;">CAC: BN 9703072 • Adaption AI Verified[cite: 2, 15]</p>
+    </div>
   </div>
 </section>
 </main>
@@ -552,11 +544,11 @@ nav a:hover { color: #fff; }
     </div>
     <div class="ai-messages" id="ai-messages">
       <div class="ai-msg system">
-        Welcome to Climate Nanos Enterprise! I am your Adaptive AI assistant. How can I assist you today regarding our Smart Solar Agri-Hub, technology, or investment opportunities?
+        Welcome to Climate Nanos Enterprise! I am your Adaptive AI assistant powered by the Green Stability Matrix[cite: 15]. Ask me about our Smart Solar Agri-Hubs, shelf-life stats, or investment terms!
       </div>
     </div>
     <div class="ai-input-area">
-      <input type="text" id="ai-input" placeholder="Ask about shelf-life, metrics, founders...">
+      <input type="text" id="ai-input" placeholder="Ask about founders, shelf-life, grants...">
       <button id="ai-send">Send</button>
     </div>
   </div>
@@ -567,8 +559,8 @@ nav a:hover { color: #fff; }
 
 <footer class="site-footer">
   <div>
-    <strong>© 2026 Climate Nanos Enterprise</strong> (BN 9703072)<br>
-    Alabata, Abeokuta, Ogun State · All Rights Reserved.
+    <strong>© 2026 Climate Nanos Enterprise (CAC: BN 9703072)[cite: 2]</strong><br>
+    Ogun State, Nigeria · All Rights Reserved.
   </div>
   <div class="footer-links">
     <a href="https://www.linkedin.com/company/climate-nanos-enterprise/" target="_blank" rel="noopener">LinkedIn</a>
@@ -577,12 +569,12 @@ nav a:hover { color: #fff; }
   </div>
 </footer>
 
-<!-- INTERACTIVE SCRIPTS (3D Canvas + Adaptive AI Logic) -->
+<!-- INTERACTIVE SCRIPTS -->
 <script>
 // 1. THREE.JS 3D TECH GLOBE VISUALIZER
 window.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('hero-canvas');
-  if (!canvas || typeof Three === 'undefined' && typeof THREE === 'undefined') return;
+  if (!canvas || typeof THREE === 'undefined') return;
   
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -591,24 +583,15 @@ window.addEventListener('DOMContentLoaded', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
 
-  // Wireframe Globe
   const geometry = new THREE.IcosahedronGeometry(3, 3);
-  const material = new THREE.MeshBasicMaterial({
-    color: 0x10b981,
-    wireframe: true,
-    transparent: true,
-    opacity: 0.25
-  });
+  const material = new THREE.MeshBasicMaterial({ color: 0x10b981, wireframe: true, transparent: true, opacity: 0.25 });
   const globe = new THREE.Mesh(geometry, material);
   scene.add(globe);
 
-  // Glowing Nodes
   const particleGeo = new THREE.BufferGeometry();
   const count = 150;
   const positions = new Float32Array(count * 3);
-  for(let i=0; i<count*3; i++) {
-    positions[i] = (Math.random() - 0.5) * 8;
-  }
+  for(let i=0; i<count*3; i++) { positions[i] = (Math.random() - 0.5) * 8; }
   particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   const particleMat = new THREE.PointsMaterial({ size: 0.05, color: 0x34d399 });
   const particles = new THREE.Points(particleGeo, particleMat);
@@ -644,18 +627,17 @@ aiTrigger.addEventListener('click', () => aiWindow.classList.toggle('active'));
 aiClose.addEventListener('click', () => aiWindow.classList.remove('active'));
 
 const knowledgeBase = [
-  { keywords: ['founder', 'opanuga', 'stephen', 'ceo'], response: "Opanuga Stephen is the Founder, Strategic Lead, & E-commerce Expert at Climate Nanos Enterprise. You can reach him directly at stevenopanuga@gmail.com." },
-  { keywords: ['shelf', 'life', 'tomato', 'pepper', 'preservation'], response: "Our field-validated Smart Solar Agri-Hub extends tomato shelf-life from 2 to 14+ days and pepper shelf-life from 3 to 21+ days using 100% off-grid solar thermoelectric cooling and microclimate control." },
-  { keywords: ['grant', 'funding', 'neo', 'capital'], response: "Climate Nanos Enterprise won 1st Place at the Nigerian Engineering Olympiad (₦3M grant), 2nd Place at the Oyebolu Innovation Competition, and has raised ₦4.35M NGN in non-dilutive capital to date." },
-  { keywords: ['team', 'leadership', 'founders', 'members'], response: "Our executive board includes Opanuga Stephen (Strategic Lead), Ajibade Ayomiposi (Operations & IoT), Sanusi Isaiah Opeyemi (Engineering & Solar), Jimo Mubarak (IoT Data), Taiwo Timilehin Olajolo (UI/UX), Ayomide Akinleye (Systems Integration), Prof. S.O. Ismaila (Advisor), and Alpha Ind Thomas (Global Expansion)." },
-  { keywords: ['store', 'buy', 'shopify', 'password'], response: "You can access our store at smart-solar-agri-hub.myshopify.com. The pre-launch password is 'Climate-Nanos'." }
+  { keywords: ['founder', 'opanuga', 'stephen', 'ceo'], response: "Stephen Opanuga is the Founder & CEO of Climate Nanos Enterprise, overseeing strategic leadership and e-commerce growth. Email: stevenopanuga@gmail.com[cite: 2, 14]." },
+  { keywords: ['shelf', 'life', 'tomato', 'pepper'], response: "Our smart solar cold rooms extend tomato shelf life from 2 to 14+ days and fresh peppers from 3 to 21+ days[cite: 3]." },
+  { keywords: ['grant', 'funding', 'neo', 'capital'], response: "We won the Nigerian Engineering Olympiad (₦3M grant) and have raised ₦4.35M NGN total capital to validate our off-grid prototype[cite: 6]." },
+  { keywords: ['ai', 'adaption', 'carbon', 'matrix', 'n9n'], response: "The Adaption AI Green Stability Matrix uses n9n pipelines to calculate CO₂e emissions per unit and inject verified climate impact badges onto e-commerce product pages[cite: 4, 9, 15]." },
+  { keywords: ['store', 'buy', 'shopify', 'password'], response: "Visit our pre-launch store at smart-solar-agri-hub.myshopify.com with the password 'Climate-Nanos'." }
 ];
 
 function handleAISend() {
   const query = aiInput.value.trim().toLowerCase();
   if (!query) return;
 
-  // Add User Message
   const userDiv = document.createElement('div');
   userDiv.className = 'ai-msg user';
   userDiv.textContent = aiInput.value;
@@ -663,17 +645,14 @@ function handleAISend() {
   aiInput.value = '';
   aiMessages.scrollTop = aiMessages.scrollHeight;
 
-  // Simulate Adaptive Intelligence Response
   setTimeout(() => {
-    let reply = "Climate Nanos Enterprise is engineering nano-enabled solar solutions to eliminate post-harvest losses. For specific partnership or investment queries, please email climatenanos@gmail.com.";
-    
+    let reply = "Climate Nanos Enterprise engineers decentralized solar agri-hubs and Adaption AI carbon tools. For inquiries, email climatenanos@gmail.com[cite: 2, 4, 15].";
     for (let item of knowledgeBase) {
       if (item.keywords.some(kw => query.includes(kw))) {
         reply = item.response;
         break;
       }
     }
-
     const sysDiv = document.createElement('div');
     sysDiv.className = 'ai-msg system';
     sysDiv.textContent = reply;
